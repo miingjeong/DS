@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}My Page{% endblock %}
+
+{% block contents %}
+
+    <table>
+        <thead>
+            <th>회원정보</th>
+        </thead>
+        <tbody>
+            {% for p in user %}
+            <tr><stong>ID</stong></tr>
+            <tr>{{p.username}</tr>
+            <tr><stong>넥네임</stong></tr>
+            <tr>{{p.last_name}</tr>
+            <tr><stong>이메일</stong></tr>
+            <tr>{{p.email}</tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}
