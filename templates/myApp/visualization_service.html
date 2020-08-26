@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}시각화 서비스{% endblock %}
+
+{% block contents %}
+    <h1>서울시 노령화 인구</h1>
+    <form action="/map_viw" target="map_view" class="text-right">
+        <select name="area" style="width: 100px; margin-rignt:200px; padding:5px">
+            <option value="동">동 단위</option>
+            <option value="구">구 단위</option>
+        </select>
+        <button type="submit" class="btn btn-primary">보기</button>
+    </form>
+    <iframe src="/map_view" width="100%" height="500px" name="map_view"></iframe>
+
+{% endblock %}
